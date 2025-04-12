@@ -3,4 +3,4 @@
 
 void trimNewline(char *str);
 
-#endif // UTILS_H
+#endif 
