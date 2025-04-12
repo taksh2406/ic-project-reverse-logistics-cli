@@ -35,25 +35,25 @@ double* dijkstra(double **graph, int source, int numNodes)
         double min = INF;
         for (int i = 0; i < numNodes; i++) {
             if (!visited_check[i] && distance[i] < min) {
-                min = dist[i];
+                min = distance[i];
                 u = i;
             }
         }
         if (u == -1) 
         break;
-        visited[u] = 1;
+        visited_check[u] = 1;
 
         for (int v = 0; v < numNodes; v++) 
         {
-            if (!visited[v] && graph[u][v] < INF && dist[u] + graph[u][v] < dist[v])
+            if (!visited_check[v] && graph[u][v] < INF && distance[u] + graph[u][v] < distance[v])
             {
-                dist[v] = dist[u] + graph[u][v];
+                distance[v] = distance[u] + graph[u][v];
             }
         }
     }
 
-    free(visited);
-    return dist;
+    free(visited_check);
+    return distance;
 }
 
 int dijkstraFindBestWarehouse(Warehouse warehouses[], int count, double productLat, double productLon) {
