@@ -68,26 +68,26 @@ void processMenu(Product products[], int productCount, Customer customers[], int
                 }
             case 4: 
                 {
-                double lat, lon;
-                printf("Enter product's current latitude: ");
-                scanf("%lf", &lat);
-                printf("Enter product's current longitude: ");
-                scanf("%lf", &lon);
-                int bestIndex = dijkstraFindBestWarehouse(warehouses, warehouseCount, lat, lon);
-                if (bestIndex != -1)
-                {
-                    printf("Best Warehouse using Dijkstra's Algorithm:\n");
-                    printf("ID: %d | Name: %s | Location: %s\n",
-                           warehouses[bestIndex].id,
-                           warehouses[bestIndex].name,
-                           warehouses[bestIndex].location);
-                }
-                else
-                {
-                    printf("No suitable warehouse found.\n");
-                }
+                   double lat, lon;
+                   printf("Enter product's current latitude: ");
+                   scanf("%lf", &lat);
+                   printf("Enter product's current longitude: ");
+                   scanf("%lf", &lon);
+                   int bestIndex = dijkstraFindBestWarehouse(warehouses, warehouseCount, lat, lon);
+                   if (bestIndex != -1)
+                   {
+                       printf("Best Warehouse using Dijkstra's Algorithm:\n");
+                       printf("ID: %d | Name: %s | Location: %s\n",
+                       warehouses[bestIndex].id,
+                       warehouses[bestIndex].name,
+                       warehouses[bestIndex].location);
+                   }
+                   else
+                   {
+                       printf("No suitable warehouse found.\n");
+                   }
                 break;
-            }
+                }
             case 5:
                 {
                 processReturnClassification();
