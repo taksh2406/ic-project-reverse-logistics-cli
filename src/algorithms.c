@@ -24,7 +24,7 @@ double* dijkstra(double **graph, int source, int numNodes)
     
     for (int i = 0; i < numNodes; i++)
     {
-        distace[i] = INF;
+        distance[i] = INF;
         visited_check[i] = 0;
     }
     distance[source] = 0;
