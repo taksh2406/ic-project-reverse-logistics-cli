@@ -58,7 +58,8 @@ double* dijkstra(double **graph, int source, int numNodes)
     return distance;
 }
 
-int dijkstraFindBestWarehouse(Warehouse warehouses[], int count, double productLat, double productLon) {
+int dijkstraFindBestWarehouse(Warehouse warehouses[], int count, double productLat, double productLon)
+{
     int numNodes = count + 1;
     double costFactor = 10.0;
 
