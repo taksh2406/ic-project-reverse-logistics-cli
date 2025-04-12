@@ -3,8 +3,8 @@
 
 #include "warehouses.h"
 
-double haversine(double lat1, double lon1, double lat2, double lon2);
+double haversine(double lat1,double lon1,double lat2,double lon2);
 
-int dijkstraFindBestWarehouse(Warehouse warehouses[], int count, double productLat, double productLon);
+int dijkstraFindBestWarehouse(Warehouse warehouses[],int count,double productLat,double productLon);
 
 #endif 
