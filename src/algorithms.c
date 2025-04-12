@@ -33,8 +33,10 @@ double* dijkstra(double **graph, int source, int numNodes)
     {
         int u=-1;
         double min = INF;
-        for (int i = 0; i < numNodes; i++) {
-            if (!visited_check[i] && distance[i] < min) {
+        for (int i = 0; i < numNodes; i++)
+        {
+            if (!visited_check[i] && distance[i] < min)
+            {
                 min = distance[i];
                 u = i;
             }
